@@ -1,8 +1,3 @@
----
-title: 在 Ubuntu 系统中安装 Swift
-date: 2020-02-12 22:12
----
-
 > 简单记录一下在 Ubuntu 系统下安装 Swift 的过程
 
 ### 下载镜像
