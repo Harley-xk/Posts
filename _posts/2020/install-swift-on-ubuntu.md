@@ -1,6 +1,11 @@
 ---
 title: 在 Ubuntu 系统中安装 Swift
+abstract: 简单记录一下在 Ubuntu 系统下安装 Swift 的过程。首先根据系统版本下载对应的 Swift 镜像，可以在 Swift [官方网站的下载页](https://swift.org/download/#releases)找到当前支持的系统版本。以 Ubuntu 18.04，swift 5.14 为例，使用 wget 下载...
 date: 2020-02-12 22:12
+tags:
+ - Swift
+ - Vapor
+ - Linux
 ---
 
 > 简单记录一下在 Ubuntu 系统下安装 Swift 的过程
