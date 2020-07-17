@@ -47,7 +47,7 @@ Vapor 4 最低支持 Swift 5.2，因此需要安装 Xcode 11.4 及以上版本�
 
 ### Vapor 工具箱
 
-Vapor Toolbox 是官方提供用来管理和编译 Vapor 项目的一个命令行工具。这个工具不是必须的，它最终还是调用的 swift 的命令行工具，如果你很了解 swift 和 spm，理论上可以直接使用。
+Vapor Toolbox 是官方提供用来管理和编译 Vapor 项目的一个命令行工具。这个工具不是必须的，它最终还是调用的 swift 的命令行工具，如果你很了解 swift 和 spm，理论上可以直接使用，不过可能需要多做很多事情。Toolbox 可以帮助直接创建项目、更新依赖、编译甚至部署。
 
 安装 Toolbox 很简单，使用 homebrew:
 
@@ -55,11 +55,13 @@ Vapor Toolbox 是官方提供用来管理和编译 Vapor 项目的一个命令�
 brew install vapor
 ```
 
-安装完成后，在命令行输入`vapor --help`可以看到如下图所示，Toolbox 可以帮助创建项目、更新依赖、编译、部署等。
+安装完成后，在命令行输入`vapor --help`可以看到如下图所示：
 
 ![Vapor Help](/post-images/vapor-start/vapor-help.png)
 
-## 使用 Vapor toolbox 创建项目
+## 创建项目
+
+### 使用 Vapor toolbox 创建项目
 
 Toolbox 使用起来还是很方便的，创建项目依然只需要一行命令：
 
@@ -71,19 +73,19 @@ Toolbox 会自动去 github 下载最新的项目模板，鉴于 github 在国�
 
 创建之前 Toolbox 会询问你是否需要使用 [Fluent](https://github.com/vapor/fluent)，Fluent 是 Vapor 的 ORM 框架，如果你需要跟数据库打交道的话是绕不开的，这里建议选择 yes。
 
-接着 Toolbox 会询问你需要使用哪个数据库，Vapor 目前支持 Postgres、MySQL、MongoDB、SQLite 等，官方推荐使用 Postgres。当然，如果你的项目没有很高的数据并发读写的要求，SQLite 也能满足需求。
-
 > 如果你不需要数据库，也可以直接在新建项目时加上 `-n` 命令，即使用 `vapor new Hello -n`，这个命令会自动对所有后续的问题回答 no。
+
+接着 Toolbox 会询问你需要使用哪个数据库，Vapor 目前支持 Postgres、MySQL、MongoDB、SQLite 等，官方推荐使用 Postgres。当然，如果你的项目没有很高的数据并发读写的要求，SQLite 也能满足需求。
 
 ![Vapor New](/post-images/vapor-start/vapor-new.png)
 
 > 如果你是初学者，一开始建议先选择 SQLite，这样可以省略掉复杂的数据库配置过程，先把项目跑起来。
 
-## 使用 Swift Package Manager
+### 使用 Swift Package Manager
 
-Vapor 工程是一个标准的 spm 项目，所以理论上不需要 Vapor Toolbox 也可以正常运转。随着 spm 的不断完善，现在只需要直接打开一个 Package.swift 文件，Xcode 就可以自动根据 spm 的配置自动拉取依赖和管理项目了。
+Vapor 工程是一个标准的 spm 项目，所以理论上不需要 Vapor Toolbox 也可以正常运转。随着 spm 的不断完善，现在只需要直接打开一个 `Package.swift` 文件，Xcode 就可以自动根据 spm 的配置自动拉取依赖和管理项目了。
 
-进入上面 Vapor 生成的项目，直接使用 Xcode 打开 Package.swift 文件，如下图，可以看到 Xcode 已经自动在拉取依赖了：
+进入上面 Vapor 生成的项目，直接使用 Xcode 打开 `Package.swift` 文件，如下图，可以看到 Xcode 已经自动在拉取依赖了：
 
 ![Xcode Fetching](/post-images/vapor-start/xcode-fetching.png)
 
