@@ -77,7 +77,6 @@ Toolbox 会自动去 github 下载最新的项目模板，鉴于 github 在国�
 
 ![Vapor New](/post-images/vapor-start/vapor-new.png)
 
-
 > 如果你是初学者，一开始建议先选择 SQLite，这样可以省略掉复杂的数据库配置过程，先把项目跑起来。
 
 ## 使用 Swift Package Manager
@@ -100,4 +99,10 @@ Vapor 工程是一个标准的 spm 项目，所以理论上不需要 Vapor Toolb
 
 ## 后记
 
-Vapor 系列文章其实已经酝酿了很久了，一直没有动笔写，后来 Vapor 又更新了 4.x 大版本，改动还是挺大的，所以又花了一些时间踩坑。因为我自己也只是在业余项目中使用 Vapor，理解深度有限，所以并不打算把这个系列写成 Vapor 教程。目前的想法是根据我自己的实践和体验，针对一些技术细节分享一下我自己的实践过程。
+Vapor 系列文章其实已经酝酿了很久了，一直没有动笔写，后来 Vapor 又更新了 4.x 大版本，改动还是挺大的，所以又花了一些时间踩坑。因为我自己也只是在业余项目中使用 Vapor，理解深度有限，所以并不打算把这个系列写成 Vapor 教程。目前的想法是根据我自己的实践和体验，针对一些技术细节分享一下我自己的实践过程。如果你想深入学习 Vapor，还是需要去看 Vapor 的官方文档或者相关书籍。
+
+### 书籍
+
+Vapor 的学习资料目前不多，除了官方文档之外，还有一本 Vapor 作者参与编写的 [《Server Side Swift with Vapor》](https://store.raywenderlich.com/products/server-side-swift-with-vapor)。
+
+这本书是针对 Vapor 3 写的，虽然 Vapor 4 在 API 层面有一些改动，但是整体的架构并没有大的变化；并且这本书对整个 Vapor 的使用写的非常详细，目前依然值得一读。
