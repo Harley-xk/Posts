@@ -204,7 +204,7 @@ provider.loadObject(ofClass: UIImage.self) { (image, error) in
 
 苹果在 WWDC 视频中只演示了如果使用 PHPickerViewController 获取相册照片，但对于如何获取视频只字未提，这就比较尴尬了。目前跟进 `PHPicker` 的开发者还不多，基本上都搜不到相关资料，一番折腾之后，终于在[官方论坛](https://developer.apple.com/forums/thread/652695)零星找到了几条关于获取视频的讨论。
 
-查看了官方技术人员和开发者的对话之后，大概摸清了获取视频的套路。稍微复杂一点，官方技术人员明确指出需要使用 `loadFileRepresentation` 方法来加载大文件，例如视频：
+查看了相关对话之后，总算摸清了获取视频的套路，要稍微复杂一点：框架开发者明确指出需要使用 `loadFileRepresentation` 方法来加载大文件，例如视频：
 
 ```swift
 provider.loadFileRepresentation(forTypeIdentifier: "public.movie") { url, error in
